@@ -44,7 +44,7 @@ public class JsonUtils {
      * 反序列化对象
      * 
      * @param json
-     * @param clazz
+     * @param type
      * @return
      */
     public static Object fromJson(String json,Type type){
@@ -162,15 +162,15 @@ public class JsonUtils {
 
 	public static void main(String[] args) {
 		String str = "<Response a=\"123\" b=\"000\">"
-								+ "<status  c=\"123\" d=\"000\">201</status>"
-								+ "<A><status1>201</status1><message1>APP被用户自己禁用</message1></A>"
-								+ "<A2><status1>201</status1><message1>APP被用户自己禁用</message1></A2>"
-								+ "<B>"
-								+ "	<BB><status1>201</status1><message1>APP被用户自己禁用</message1></BB>"
-								+ "</B>"
-								+ "<message>APP被用户自己禁用，请在控制台解禁</message>"
-								+ "<C><status1>201</status1><message1>APP被用户自己禁用</message1></C>"
-							+ "</Response>";
+						+ "<status  c=\"123\" d=\"000\">201</status>"
+						+ "<A><status1>201</status1><message1>APP被用户自己禁用</message1></A>"
+						+ "<A2><status1>201</status1><message1>APP被用户自己禁用</message1></A2>"
+						+ "<B>"
+						+ "	<BB><status1>201</status1><message1>APP被用户自己禁用</message1></BB>"
+						+ "</B>"
+						+ "<message>APP被用户自己禁用，请在控制台解禁</message>"
+						+ "<C><status1>201</status1><message1>APP被用户自己禁用</message1></C>"
+					+ "</Response>";
 		
 		String json = fmt2Json(str);
 		String xml = fmt2Xml(json);

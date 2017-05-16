@@ -315,7 +315,7 @@ public class StringUtils {
 	 * 通过格式化内容
 	 * 
 	 * @param template		格式化内容
-	 * @param replaceStr	带替换的字符
+	 * @param replaceStr	待替换的字符
 	 * @param paras			参数列表
 	 * @return
 	 */
@@ -350,7 +350,7 @@ public class StringUtils {
 //		String[] ss = {"aaa","bbb","ccc"};
 //		System.out.println(StringsUtil.join(ss, "#|#"));
 		
-		String template = "<root><id></id><name>#@#</name><tel>#@#</tel><addr>#@#</addr></root>";
+		String template = "<root><id>#@#</id><name>#@#</name><tel>#@#</tel><addr>#@#</addr></root>";
 		String[] paras={"001","aaa","","海淀"};
 		String data = StringUtils.format(template, "#@#", paras);
 		System.out.println(data);
